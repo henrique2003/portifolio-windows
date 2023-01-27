@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { windows, windowsFolder } from '@/assets'
 import * as S from './styles'
 import { ModalFolder } from '@/components'
 
 const Portifolio: React.FC = () => {
+  const [openModal, setOpenModal] = useState(false)
+
   return (
     <S.Container bgUrl={windows}>
-      <ModalFolder />
-      <S.Portfolio type='button'>
+      {openModal && <ModalFolder closeModal={() => setOpenModal(false)} />}
+      <S.Portfolio type='button' onDoubleClick={() => setOpenModal(true)}>
         <S.FolderImg src={windowsFolder} alt="Imagem da pasta do windows" />
         <S.PortfolioText>meus projetos</S.PortfolioText>
       </S.Portfolio>

@@ -62,3 +62,133 @@ export const Close = styled.button`
     }
   }
 `
+
+export const SubHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 5px;
+`
+
+export const Navigate = styled.div`
+  height: 25px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px; 
+  flex: 1;
+
+  button {
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:disabled {
+      svg {
+        color: rgba(0,0,0,0.4);
+        
+        &:hover {
+          color: rgba(0,0,0,0.4);
+        }
+      }
+    }
+
+    svg {
+      font-size: 17px;
+      margin-top: 2px;
+      color: rgba(0,0,0,0.6);
+      
+      &:hover {
+        color: #6faae8;
+      }
+    }
+  }
+`
+
+export const PathContainer = styled.div`
+  height: 25px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 10;
+  border: 0.5px solid rgba(218,219,220,1);
+
+  button {
+    color: rgba(0,0,0,0.8);
+    margin: 0;
+    padding: 0;
+    height: 25px;
+    background: none;
+    border: none;
+    border: 1px solid transparent;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all .2s ease;
+
+    span {
+      padding: 0 5px;
+      text-align: center;
+    }
+
+    &:hover {
+      border: 1px solid rgba(111,170,232, 0.3);
+      background-color: rgba(205,228,252, 0.2);
+      transition: all .2s ease;
+
+      svg {
+        border-left: 0.5px solid rgba(111,170,232, 0.3);
+      }
+    }
+
+    &:active {
+      border: 1px solid rgba(111,170,232, 0.7);
+      background-color: rgba(205,228,252, 0.4);
+    }
+
+    svg {
+      color: rgba(0,0,0,0.6);
+      font-size: 14px;
+      margin-top: 1px;
+      border-left: 0.5px solid transparent;
+      height: 25px;
+    }
+  }
+
+`
+
+export const SearchContainer = styled.div`
+  position: relative;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 5;
+  border: 0.5px solid rgba(218,219,220,1);
+
+  svg {
+    position: absolute;
+    left: 12px;
+    color: rgba(0,0,0,0.6);
+    font-size: 12px;
+  }
+`
+
+export const FilterInput = styled.input`
+  width: 100%;
+  color: rgba(0,0,0,0.4);
+  font-size: 12px;
+  background-color: transparent;
+  border: none;
+  padding: 5px 10px;
+  padding-left: 35px;
+  outline: none;
+`
