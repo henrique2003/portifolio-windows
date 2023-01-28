@@ -6,6 +6,16 @@ export const Container = styled.div`
   height: 450px;
   width: 100%;
   background: white;
+
+  @media(max-width: 750px) {
+    max-width: 500px;
+
+    margin: 0 30px;
+  }
+
+  @media(max-width: 500px) {
+    width: auto;
+  }
 `
 
 export const Header = styled.div`
@@ -109,6 +119,10 @@ export const Navigate = styled.div`
       }
     }
   }
+
+  @media(max-width: 500px) {
+    display: none;
+  }
 `
 
 export const PathContainer = styled.div`
@@ -163,6 +177,10 @@ export const PathContainer = styled.div`
     }
   }
 
+
+  @media(max-width: 400px) {
+    display: none;
+  }
 `
 
 export const SearchContainer = styled.div`
@@ -191,4 +209,13 @@ export const FilterInput = styled.input`
   padding: 5px 10px;
   padding-left: 35px;
   outline: none;
+`
+
+export const ProjectList = styled.div`
+  flex: 1;
+  min-height: 350px;
+  padding: 10px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 `

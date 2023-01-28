@@ -10,7 +10,7 @@ const Portifolio: React.FC = () => {
   return (
     <S.Container bgUrl={windows}>
       {openModal && <ModalFolder closeModal={() => setOpenModal(false)} />}
-      <S.Portfolio type='button' onDoubleClick={() => setOpenModal(true)}>
+      <S.Portfolio type='button' onClick={() => setOpenModal(true)}>
         <S.FolderImg src={windowsFolder} alt="Imagem da pasta do windows" />
         <S.PortfolioText>meus projetos</S.PortfolioText>
       </S.Portfolio>

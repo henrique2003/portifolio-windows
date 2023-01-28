@@ -5,6 +5,8 @@ import { MdKeyboardArrowRight } from 'react-icons/md'
 import { VscSearch } from 'react-icons/vsc'
 
 import * as S from './styles'
+import { CurrentProjectItem, FolderItem } from '@/components'
+import { chrome, github, notes } from '@/assets'
 
 interface Props {
   closeModal: () => void
@@ -45,6 +47,35 @@ const ModalFolder: React.FC<Props> = ({ closeModal }) => {
           <S.FilterInput type='text' placeholder='Pesquisar' />
         </S.SearchContainer>
       </S.SubHeader>
+      <S.ProjectList>
+        {/* <FolderItem />
+        <FolderItem />
+        <FolderItem />
+        <FolderItem /> */}
+        <CurrentProjectItem
+          img={{
+            src: chrome,
+            alt: 'icone do google chrome'
+          }}
+          text='indecisionapp.netlify.app'
+          link='https://indecision-aplication.netlify.com'
+        />
+        <CurrentProjectItem
+          img={{
+            src: github,
+            alt: 'icone do github'
+          }}
+          text='indecisionapp.netlify.app'
+          link='https://indecision-aplication.netlify.com'
+        />
+        <CurrentProjectItem
+          img={{
+            src: notes,
+            alt: 'icone do notas'
+          }}
+          text='descrição.txt'
+        />
+      </S.ProjectList>
     </S.Container>
   )
 }
