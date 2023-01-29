@@ -13,7 +13,7 @@ export const Container = styled.a`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 10px;
+  padding: 10px 0;
   text-decoration: none;
 
   &:hover {

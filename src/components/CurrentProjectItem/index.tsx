@@ -13,7 +13,7 @@ interface Props {
 const CurrentProjectItem: React.FC<Props> = ({ img, text, link }) => {
   return (
     <S.Container href={link} target='_blank'>
-      <S.Icon src={img.src} alt={img.alt} />
+      <S.Icon src={img.src} alt={img.alt} loading='eager' priority />
       <S.Text>{text}</S.Text>
     </S.Container>
   )

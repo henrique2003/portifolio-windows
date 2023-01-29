@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
 import { windows, windowsFolder } from '@/assets'
-import * as S from './styles'
 import { ModalFolder } from '@/components'
+import * as S from './styles'
 
 const Portifolio: React.FC = () => {
   const [openModal, setOpenModal] = useState(false)

@@ -1,11 +1,21 @@
 import { windowsFolder } from '@/assets'
 import * as S from './styles'
 
-const FolderItem: React.FC = () => {
+interface Props {
+  name: string
+  onClick: () => void
+}
+
+const FolderItem: React.FC<Props> = ({ onClick, name }) => {
   return (
-    <S.Container>
-      <S.ProjectImg src={windowsFolder} alt='Projeto 1' />
-      <S.Text>Indecision App</S.Text>
+    <S.Container onClick={() => onClick()}>
+      <S.ProjectImg
+        src={windowsFolder}
+        alt={`Projeto ${name}`}
+        loading='eager'
+        priority
+      />
+      <S.Text>{name}</S.Text>
     </S.Container>
   )
 }

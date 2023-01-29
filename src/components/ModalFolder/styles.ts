@@ -213,9 +213,9 @@ export const FilterInput = styled.input`
 
 export const ProjectList = styled.div`
   flex: 1;
-  min-height: 350px;
+  /* min-height: 350px; */
   padding: 10px 15px;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 15px;
 `
